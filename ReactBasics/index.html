@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"
+        integrity="sha512-/1uYu3K5HmOTNdhaOt6Rh7qQgLk/zn0kfw4nqNtqbpACxAx2tKp+lXJ4tnx3zn0vMq4n97+1eKI0vfdU0x+NHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h3>React App</h3>
+    <div id="ap1"></div>
+    <div id="ap2"></div>
+    <div id="ap3"></div>
+    <div id="ap4"></div>
+    <!--the above react sript libraray will come with two objects react and react dom-->
+    <script type="text/babel">
+
+        //generate HTML (second argumnet is attributes like id and class)
+        const element = React.createElement("div", null, "this is react generated");
+        // render element to div with id ap1
+        ReactDOM.createRoot(document.getElementById("ap1")).render(element);
+
+        const element1 = React.createElement("div", null, React.createElement("h3", null, "this is react generated h3"));
+        ReactDOM.createRoot(document.getElementById("ap2")).render(element1);
+
+        // ti simplify this creation of element reacte created JSX - JSX is java script extension
+
+
+        // JSX
+
+        ReactDOM.createRoot(document.getElementById("ap3")).render(<div><h3>this is react generated h3 by JSX </h3></div>);// to understad ths as JSX ode need to add JSX compiler whihc converts it int javascript code
+
+
+
+
+        // component - resusable UI widget
+
+        function MyComponent() {
+            return (<div><h1>React Component </h1></div>);
+        }
+
+        ReactDOM.createRoot(document.getElementById("ap4")).render(<MyComponent/>)
+
+
+    </script>
+
+</body>
+
+</html>

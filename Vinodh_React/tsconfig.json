@@ -1,0 +1,10 @@
+
+
+{
+
+    "compilerOptions": {
+        "target": "ES6",
+        "outDir": "build",
+        "noEmitOnError": true,// dont generater js file if there is an error
+    }
+}
